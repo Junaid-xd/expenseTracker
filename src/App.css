@@ -1,0 +1,75 @@
+
+
+body{
+  padding: 5px;
+  margin: 0;
+  /* background: linear-gradient(to right, black, hotpink); */
+  background-color: #DE638A;
+  /* background: linear-gradient(to right, rgb(194, 194, 88), rgb(95, 203, 224)); */
+}
+
+.name-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+
+   /* background: linear-gradient(to right,  #ff00cc, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.components-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+
+}
+
+.expenseInput-div{
+  width: 25%;
+ 
+}
+
+.expenseTable-div{
+  width: 70%;
+
+}
+
+.upper-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  
+}
+
+.add-new-text{
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-new-text:hover{
+  color: white;
+}
+
+@media ((max-width:786px)) {
+
+  .components-div{
+    flex-direction: column;
+  }
+
+  .expenseInput-div{
+    width: 100%;
+  }
+  
+  .expenseTable-div{
+    width: 100%;
+    margin-top: 10px ;
+  }
+}

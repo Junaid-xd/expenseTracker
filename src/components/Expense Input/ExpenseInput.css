@@ -1,0 +1,180 @@
+.input-wrapper{
+  position: relative;
+  
+  background-color: #F3D9E5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.658);
+  border-radius: 10px;
+  padding: 15px 0px;
+  margin-top: 10%;
+}
+
+
+
+.in-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+
+  /* border: 1px solid red; */
+}
+.in-ele{
+  min-width: 70%;
+}
+
+
+.btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+
+.add-btn{
+  width: 100px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 10px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #059669;
+}
+
+.err-div, .succ-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.err-p{
+  font-size: 12px;
+  color: red;
+  font-weight: bold;
+}
+
+.succ-p{
+  font-size: 12px;
+  color: green;
+  font-weight: bold;
+}
+
+
+
+
+.in-label{
+  margin-right: 10px;
+}
+
+
+
+.addNewCate-Btn{
+  background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media((max-width:786px)){
+  .add-btn{
+    width: 100px;
+    padding: 10px 0px;
+  }
+}
+
+
+
+
+
+/* 
+
+.input-wrapper {
+  border-radius: 10px;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.in-div {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.in-div input {
+  width: 70%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border 0.2s;
+}
+
+.in-div input:focus {
+  border-color: #6366f1;
+}
+
+.in-label {
+  font-weight: 600;
+  min-width: 80px;
+  margin-bottom: 4px;
+}
+
+.add-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 10px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #059669;
+}
+
+.err-p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  .in-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .in-div input {
+    width: 100%;
+  }
+
+  .in-label {
+    margin-bottom: 6px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+} */

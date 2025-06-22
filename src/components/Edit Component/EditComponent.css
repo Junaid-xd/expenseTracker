@@ -1,0 +1,174 @@
+.main-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.388);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.in-ele{
+  width: 70%;
+}
+
+.info-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.view-label{
+  margin-right: 15px;
+}
+
+.content-edit-div{
+  background-color: #F3D9E5;;
+  min-width: 30%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+
+.info-group{
+  padding: 0px 10px;
+}
+
+.closeBtn-div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right; 
+}
+
+.editBtn-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.update-btn{
+   width: 100px;
+  margin-bottom: 5px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 10px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.update-btn:hover{
+  background-color: #059669;
+}
+
+
+
+
+@media ((max-width:786px)) {
+
+  .content-edit-div{
+    min-width: 90%;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.content {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  border: 2px solid #6366f1;
+  background-color: white;
+}
+
+.info-div {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.info-div input {
+  width: 60%;
+  padding: 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+}
+
+.info-div input:focus {
+  border-color: #6366f1;
+}
+
+.view-label {
+  font-weight: bold;
+  min-width: 100px;
+}
+
+.editBtn-div button {
+  padding: 10px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.editBtn-div button:hover {
+  background-color: #2563eb;
+}
+
+
+@media (max-width: 600px) {
+  .info-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-div input {
+    width: 100%;
+  }
+
+  .view-label {
+    margin-bottom: 5px;
+  }
+
+  .editBtn-div button {
+    width: 100%;
+  }
+} */
