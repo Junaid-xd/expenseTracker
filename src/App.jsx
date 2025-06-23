@@ -2,6 +2,7 @@ import { useState } from 'react'
 import ExpenseTable from './components/Expense Table/ExpenseTable'
 import ExpenseInput from './components/Expense Input/ExpenseInput'
 import './App.css'
+import PieChart from './components/Pie Chart/PieChart'
 
 const temp = [
     {
@@ -103,17 +104,26 @@ function App() {
 
   const[showExpenseTable, setShowExpenseTable]=useState(true);
   const[showExpenseInput, setShowExpenseInput]=useState(false);
+  const[showPieChart, setShowPieChart]=useState(false);
 
   const [filterCategory, setFilterCategory] = useState('')
 
   const handelAddClick = ()=>{
-    setShowExpenseTable(false)
     setShowExpenseInput(true)
+    setShowExpenseTable(false)
+    setShowPieChart(false)
   }
 
   const handelExpensesClick = ()=>{
     setShowExpenseTable(true)
+    setShowPieChart(false)
     setShowExpenseInput(false)
+  }
+
+  const handelPieChartClick = ()=>{
+    setShowPieChart(true);
+    setShowExpenseInput(false);
+    setShowExpenseTable(false);
   }
 
   return (
@@ -128,32 +138,43 @@ function App() {
         <div className="upper-div">
 
           {
-            showExpenseTable &&
+            showExpenseTable && !showPieChart && !showExpenseInput &&
             <div className="input-div">
-              <p className='add-new-text' onClick={handelAddClick}>Add New Expense</p>
+              <p className='add-new-text theText' onClick={handelAddClick}>Add New Expense</p>
             </div>
           }
 
           {
-            showExpenseInput && 
+            !showExpenseTable && 
             <div className="input-div">
-              <p className='add-new-text' onClick={handelExpensesClick}>Show Expenses</p>
+              <p className='add-new-text theText' onClick={handelExpensesClick}>Show Expenses</p>
             </div>
           }
 
-          <div className="filters-div">
-            <select value={filterCategory} onChange={(e)=>setFilterCategory(e.target.value)}>
+          {
+            !showExpenseInput && !showPieChart &&
+            <div className="pieChart-div">
+              <p onClick={handelPieChartClick} className='pieChartText theText'>Show Pie Chart</p>
+            </div>
+          }
 
-              <option value={''}>---Choose Filter---</option>
-              {
-                categories.map((cate, index) => {
-                  return <option key={index} value={cate}>{cate}</option>;
-                })
-              }
-              <option value="showAll">Show All</option>
+          {
+            showExpenseTable &&
+            <div className="filters-div">
+              <select value={filterCategory} onChange={(e)=>setFilterCategory(e.target.value)} className='theText'>
 
-            </select>
-          </div>
+                <option value={''}>---Choose Filter---</option>
+                {
+                  categories.map((cate, index) => {
+                    return <option key={index} value={cate}>{cate}</option>;
+                  })
+                }
+                <option value="showAll">Show All</option>
+
+              </select>
+            </div>
+          }
+
         </div>
 
         <div className='components-div'>
@@ -175,6 +196,14 @@ function App() {
         
 
         </div>
+
+
+        {
+          showPieChart && 
+          <div className="piechart-div">
+            <PieChart myArr={myArr}/>
+          </div>
+        }
 
       </div>
     </>

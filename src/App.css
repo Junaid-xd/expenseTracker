@@ -47,16 +47,23 @@ body{
   
 }
 
-.add-new-text{
+.add-new-text, .pieChartText{
   text-decoration: underline;
-  color: blue;
+  color: white;
   font-weight: bold;
   cursor: pointer;
 }
 
-.add-new-text:hover{
-  color: white;
+.add-new-text:hover, .pieChartText:hover{
+  color: blue;
 }
+
+.piechart-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media ((max-width:786px)) {
 
@@ -71,5 +78,9 @@ body{
   .expenseTable-div{
     width: 100%;
     margin-top: 10px ;
+  }
+
+  .theText{
+    font-size: 12px;
   }
 }
