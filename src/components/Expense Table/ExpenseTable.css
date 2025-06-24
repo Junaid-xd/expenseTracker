@@ -22,7 +22,7 @@ table {
   background-color: #F3D9E5;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.658);
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
  
 }
@@ -115,6 +115,10 @@ tr{
     padding: 12px 10px;   
     letter-spacing: 0.5px; 
     text-transform: uppercase;
+  }
+
+  table{
+    border-radius: none;
   }
 }
 
