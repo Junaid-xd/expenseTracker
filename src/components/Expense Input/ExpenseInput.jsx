@@ -19,7 +19,7 @@ function ExpenseInput({myArr, setMyArr, categories, setCategories}) {
   const validateTitleField = ()=>{
     if(title === ''){
       setErrorMsg("Title field can't be empty*");
-      setInterval(()=>{
+      setTimeout(()=>{
         setErrorMsg(null)
       }, errMsgTimeoutMiliseconds)
       return false
@@ -30,14 +30,14 @@ function ExpenseInput({myArr, setMyArr, categories, setCategories}) {
   const validateAmountField = ()=>{
     if(amount===''){
        setErrorMsg("Amount can't be empty*")
-        setInterval(()=>{
+        setTimeout(()=>{
           setErrorMsg(null)
         }, errMsgTimeoutMiliseconds)
         return false
     }
     else if(amount<0){
       setErrorMsg("Amount can't be negative*")
-      setInterval(()=>{
+      setTimeout(()=>{
         setErrorMsg("")
       }, errMsgTimeoutMiliseconds)
       return false
@@ -48,7 +48,7 @@ function ExpenseInput({myArr, setMyArr, categories, setCategories}) {
   const validateCategoryField = ()=>{
     if(category === ''){
       setErrorMsg("Category field can't be empty*");
-      setInterval(()=>{
+      setTimeout(()=>{
         setErrorMsg(null)
       }, errMsgTimeoutMiliseconds)
       return false
@@ -60,7 +60,7 @@ function ExpenseInput({myArr, setMyArr, categories, setCategories}) {
   const validateDateField = ()=>{
     if(date === ''){
       setErrorMsg("Please choose a date*");
-      setInterval(()=>{
+      setTimeout(()=>{
         setErrorMsg(null)
       }, errMsgTimeoutMiliseconds)
       return false
@@ -97,7 +97,7 @@ function ExpenseInput({myArr, setMyArr, categories, setCategories}) {
       }
 
       setSuccessMsg("Expense Added Successfully")
-        setInterval(()=>{
+        setTimeout(()=>{
         setSuccessMsg(null)
       }, errMsgTimeoutMiliseconds)
       setTitle('');
